@@ -1,0 +1,28 @@
+create table empresa(
+id_empresa VARCHAR(10) NOT NULL,
+rua VARCHAR(15) NOT NULL,
+CEP VARCHAR(20) NOT NULL,
+bairro VARCHAR(20) NOT NULL,
+complemento VARCHAR(20) NOT NULL,
+numero VARCHAR(20) NOT NULL,
+cidade VARCHAR(20) NOT NULL,
+PRIMARY KEY (id_empresa)
+)
+CREATE TABLE empregado(
+id_empregado VARCHAR(15) NOT NULL,
+nome_empregado VARCHAR(35) NOT NULL,
+horas_semanais VARCHAR(35) NOT NULL,
+PRIMARY KEY (id_empregado)
+)
+create table empregado_empresa(
+id_empregado VARCHAR(10) NOT NULL,
+id_empresa VARCHAR(15) NOT NULL,
+FOREIGN KEY (id_empregado) REFERENCES empregado (id_empregado),
+FOREIGN KEY (id_empresa) REFERENCES empresa (id_empresa)
+)
+INSERT INTO empresa(id_empresa, rua, CEP, bairro, complemento, numero, cidade)
+VALUES('1329', 'xerelandia', '92763300', 'bucetrildes', 'bloco b 201', '23', 'xerelvis')
+INSERT INTO empregado(id_empregado, nome_empregado, horas_semanais)
+VALUES('12321', 'borgin', '20h')
+INSERT INTO empregado_empresa(id_empresa, id_empregado)
+VALUES('1329','12321')

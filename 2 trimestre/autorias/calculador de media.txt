@@ -1,0 +1,12 @@
+
+Função para calcular a média das notas de um aluno em uma disciplina {
+    const grades = student.grades;
+    if (grades.hasOwnProperty(subject)) {
+        const subjectGrades = grades[subject];
+        const totalGrades = Object.values(grades).reduce((total, grade) => total + grade, 0);
+        return subjectGrades / totalGrades;
+    } else {
+        return -1; // Indicador de disciplina não encontrada
+    }
+}
+

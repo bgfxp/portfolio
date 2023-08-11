@@ -1,0 +1,19 @@
+create table cliente(
+id_pedido VARCHAR(10) NOT NULL,
+nome_cliente(15) NOT NULL,
+PRIMARY KEY (id_pedido)
+)
+CREATE TABLE produto(
+id_produto VARCHAR(15) NOT NULL,
+nome_produto VARCHAR(35) NOT NULL,
+PRIMARY KEY (id_produto)
+)
+create table categoria(
+categoria_produto VARCHAR(100) NOT NULL,
+)
+INSERT INTO cliente(id_pedido, nome_cliente)
+VALUES('1', 'Arthur')
+INSERT INTO produto(id_produto, nome_produto)
+VALUES('1', 'Arroz',)
+INSERT INTO categoria(categoria_produto)
+VALUES('comida, moda, esporte')
