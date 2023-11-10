@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão para Exibir Imagem</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #imagem-container {
+            display: none;
+        }
+
+        #botao-centralizado {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="botao-centralizado" onclick="exibirImagem()">Clique para ver um campeão</button>
+
+    <div id="imagem-container">
+        <img id="imagem" src="" alt="Imagem">
+    </div>
+
+    <script>
+
+        function exibirImagem() {
+            var container = document.getElementById('imagem-container');
+            var imagem = document.getElementById('imagem');
+
+            var caminhoDaImagem = 'https://static.poder360.com.br/2023/10/lionel-messi-bola-de-ouro-30out2023-848x477.jpg';
+
+            imagem.src = caminhoDaImagem;
+
+            container.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
